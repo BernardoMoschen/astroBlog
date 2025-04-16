@@ -15,8 +15,13 @@ interface Props {
 const { title, body, colSpan, rowSpan, href, colorText } = Astro.props;
 ---
 
+<!-- className={
+    `card-animate transform-y-[-40%] align-start perspective-1200 group group relative col-span-1 h-auto w-full flex-none transform justify-start overflow-hidden p-6 shadow-lg transition duration-75 ease-in-out ${
+        colSpan || 'md:col-span-2'
+    } ${rowSpan || ''} ${href ? 'cursor-pointer hover:border-primary' : ''}` }
+     -->
 <ReactCard
-    className={`card-animate transform-y-[-40%] align-start perspective-1200 group group relative col-span-1 h-auto w-full flex-none transform justify-start overflow-hidden p-6 shadow-lg transition duration-75 ease-in-out ${
+    className={`border-t border-neutral-700 rounded-xl bg-neutral-800 p-2 shadow-sm shadow-black group transform-y-[-40%] align-start relative col-span-1 h-auto w-full flex-none transform justify-start overflow-hidden  transition duration-75 ease-in-out ${
         colSpan || 'md:col-span-2'
     } ${rowSpan || ''} ${href ? 'cursor-pointer hover:border-primary' : ''}`}
 >
