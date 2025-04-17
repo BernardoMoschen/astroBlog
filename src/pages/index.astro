@@ -4,18 +4,26 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import Card from '@/components/Card.astro';
+import Intro from './components/Intro.astro';
 ---
 
 <!doctype html>
 <html lang='en'>
-    <head>
-        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    </head>
-    <body>
-        <Header />
-        <main>
-            <Card title='test' colSpan='12' />
-        </main>
-        <Footer />
-    </body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main class='pt-20 mt-6 px-4 h-full w-full'>
+      <section class='grid gap-6 grid-cols-12'>
+        <Card
+          classname='overflow-visible row-start-3 col-span-12 md:col-span-6 row-span-1'
+        >
+          <Intro />
+        </Card>
+        <Card classname='col-span-12 md:col-span-6 row-span-6' title='test2' />
+      </section>
+    </main>
+    <Footer />
+  </body>
 </html>

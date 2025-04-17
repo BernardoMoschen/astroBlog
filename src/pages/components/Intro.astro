@@ -1,0 +1,28 @@
+---
+import Portrait from '@/assets/portrait_me.jpg';
+import { Picture } from 'astro:assets';
+---
+
+<div class='flex flex-row-reverse justify-between'>
+  <div
+    class='relative -mr-12 flex w-2/3 max-w-56 items-center justify-center p-4'
+  >
+    <Picture
+      alt='Bernardo Moschen'
+      class='-rotate-3 rounded-lg border-[6px] border-white shadow-sm shadow-black transition-transform hover:scale-110 hover:rotate-2'
+      src={Portrait}
+      layout='responsive'
+      width={500}
+      height={600}
+    />
+  </div>
+  <div class='flex flex-col w-2/3 gap-4'>
+    <div class='py-4 border-b border-neutral-500'>
+      <h2 class='text-2xl font-bold text-white'>Bernardo Moschen</h2>
+    </div>
+    <p class='text-xl font-light text-neutral-400'>
+      I like to build useful stuff, break things on purpose, and obsess over
+      clean code and clever UIs.
+    </p>
+  </div>
+</div>
