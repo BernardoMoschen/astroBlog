@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import Card from '@/components/Card.astro';
 import Intro from './components/Intro.astro';
+import Who from './components/Who.astro';
 ---
 
 <!doctype html>
@@ -19,9 +20,11 @@ import Intro from './components/Intro.astro';
         <Card
           classname='overflow-visible row-start-3 col-span-12 md:col-span-6 row-span-1'
         >
+          <Who />
+        </Card>
+        <Card classname='col-span-12 md:col-span-6 row-span-6'>
           <Intro />
         </Card>
-        <Card classname='col-span-12 md:col-span-6 row-span-6' title='test2' />
       </section>
     </main>
     <Footer />
