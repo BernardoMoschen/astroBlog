@@ -1,5 +1,6 @@
 export * from "./Fire";
 export * from "./GitHub";
 export * from "./LinkedIn";
-export * from "./Terminal";
+export * from "./TerminalFilled";
+export * from "./TerminalOutlined";
 export * from "./Thumbtack";
