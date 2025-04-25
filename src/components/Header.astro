@@ -1,7 +1,7 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
-import logo from '@/assets/logo.png';
+import logoBee from '@/assets/logoBee.svg';
 import { Picture } from 'astro:assets';
 ---
 
@@ -15,14 +15,23 @@ import { Picture } from 'astro:assets';
         <div class='flex-1 bg-maripan'>
             <Picture
                 alt='Bernardo Moschen'
-                src={logo}
+                src={logoBee}
                 layout='responsive'
-                width={75}
-                height={85}
+                pictureAttributes={{
+                    class: 'hidden xs:inline-flex',
+                }}
+                widths={[45, 55, 65]}
+                sizes={`(max-width: 360px) 45px, (max-width: 720px) 55px, (max-width: 1600px) 65px`}
             />
         </div>
         <div
-            class='hidden text-2xl leading-none font-extrabold tracking-tight text-white md:block'
+            class='hidden
+                text-2xl
+                leading-none
+                font-extrabold
+                tracking-tight
+                text-white
+                md:block'
         >
             {SITE_TITLE}
         </div>
