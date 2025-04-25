@@ -6,6 +6,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import Card from '@/components/Card.astro';
 import Intro from './components/Intro.astro';
 import Who from './components/Who.astro';
+import { LocationCard } from '@/components/react';
 ---
 
 <!doctype html>
@@ -27,6 +28,15 @@ import Who from './components/Who.astro';
                 >
                     <Intro />
                 </Card>
+                <div class='row-start-4 col-start-2 md:col-start-4'>
+                    <LocationCard
+                        client:visible
+                        countryCode='BR'
+                        location='Porto Alegre'
+                        temperature={0}
+                        weather='cloudy'
+                    />
+                </div>
             </section>
         </main>
         <Footer />
