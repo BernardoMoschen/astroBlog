@@ -3,3 +3,5 @@
 
 export const SITE_TITLE = "Moschen";
 export const SITE_DESCRIPTION = "Welcome to my website!";
+export const GITHUB_URL = "https://github.com/BernardoMoschen";
+export const LINKEDIN_URL = "https://www.linkedin.com/in/bernardomoschen/";
