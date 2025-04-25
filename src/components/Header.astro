@@ -1,6 +1,8 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
+import logo from '@/assets/logo.png';
+import { Picture } from 'astro:assets';
 ---
 
 <header
@@ -10,6 +12,15 @@ import { SITE_TITLE } from '../consts';
         class='hidden shrink-0 items-center gap-3 active:-translate-y-px min-[560px]:flex'
         href='/'
     >
+        <div class='flex-1 bg-maripan'>
+            <Picture
+                alt='Bernardo Moschen'
+                src={logo}
+                layout='responsive'
+                width={75}
+                height={85}
+            />
+        </div>
         <div
             class='hidden text-2xl leading-none font-extrabold tracking-tight text-white md:block'
         >
