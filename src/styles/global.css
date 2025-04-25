@@ -1,9 +1,11 @@
 @import "tailwindcss";
 
-:root {
-    --gray-light: 229, 233, 240;
-    --gray-gradient: rgba(var(--gray-light), 50%), #fff;
-    --bg-marzipan: #f8d3a0; /* Use this CSS variable directly */
+@theme {
+    --breakpoint-xs: 30rem;
+    --color-marzipan: #f8d3a0; /* Use this CSS variable directly */
+    --color-tangelo-400: #ff661f;
+    --color-tangelo-500: #fd5200;
+    --color-tangelo-600: #e04700; /* Use this CSS variable directly */
 }
 
 body {
