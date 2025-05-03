@@ -20,11 +20,11 @@ export const LocationCard: FC<LocationCardProps> = ({ location, countryCode, tem
             <div className='flex flex-row   items-center mt-1 gap-4 px-2.5 py-1 rounded-full border-2 border-neutral-600 bg-neutral-800'>
                 <div className="flex items-center justify-center gap-2 ml-1">
                     <Icon name="clock" className="w-5 h-5 text-tangelo-500" />
-                    <span className="font-bold whitespace-nowrap ">{hour}:{minute}:{second}</span>
+                    <span className="font-normal text-neutral-300 whitespace-nowrap ">{hour}:{minute}:{second}</span>
                 </div>
                 <div className="flex items-center justify-center gap-2 mr-1">
                     <Icon name="sun" className="w-5 h-5 text-tangelo-500" />
-                    <span className="font-bold whitespace-nowrap ">{temperature}°C</span>
+                    <span className="font-normal text-neutral-300 whitespace-nowrap ">{temperature}°C</span>
                 </div>
             </div>
             {/* <div className="mt-2 text-sm text-neutral-300">{weather}</div> */}
