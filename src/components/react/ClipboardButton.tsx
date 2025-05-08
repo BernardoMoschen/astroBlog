@@ -20,7 +20,7 @@ export const ClipboardButton = ({ label, ...restProps }: ButtonProps) => {
 
     return (
         <button
-            onClick={handleCopyClick} // Corrected onClick handler
+            onClick={handleCopyClick}
             {...restProps}
             className="rounded px-5 py-2.5 overflow-hidden group bg-tangelo-500 relative hover:bg-gradient-to-r hover:from-tangelo-600 hover:to-tangelo-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-tangelo-400 transition-all ease-out duration-300 cursor-pointer"
         >
