@@ -5,6 +5,8 @@ export * from "./TerminalOutlined";
 export * from "./Clock";
 export * from "./Sun";
 export * from "./Briefcase";
+export * from "./DiamondOrigami";
+export * from "./PlaneOrigami";
 export * from "./BeeOrigami";
 export * from "./Robot";
 export * from "./Brazil";

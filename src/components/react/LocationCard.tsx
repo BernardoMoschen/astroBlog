@@ -16,13 +16,13 @@ export const LocationCard: FC<LocationCardProps> = ({ location, countryCode, tem
         <div id='locationCard' className="fadein relative z-30 ml-0 lg:ml-24">
             <Icon name='beeOrigami'
                 className="
-                h-12 w-12 sticker absolute -top-5 left-35 -rotate-12 z-20 transition-transform hover:scale-110 hover:rotate-3 active:translate-y-1 active:scale-105 text-tangelo-400"
+                h-12 w-12 sticker absolute -top-5 left-35 rotate-35 z-20 transition-transform hover:scale-110 hover:rotate-30 active:translate-y-1 active:scale-105 text-tangelo-400"
             />
             <div className="relative h-40 cursor-default overflow-hidden rounded-xl bg-neutral-800 p-2 shadow-sm shadow-black">
 
                 <Icon name='brazil'
                     className="
-                    fade-in-up absolute top-1/2 -left-45 -mt-[25%] -translate-y-1/2 scale-[0.75]"
+                    fade-in-up absolute top-1/2 -left-57 -mt-[35%] -translate-y-1/2 scale-[0.75]"
                 />
                 <div className="relative flex h-full items-center rounded-lg border border-neutral-600 px-8">
                     <div className="flex h-full flex-1 flex-col items-end justify-center gap-1" >
