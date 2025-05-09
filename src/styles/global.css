@@ -30,7 +30,7 @@
 
 body {
     /* Use the CSS variable instead of @apply */
-    @apply font-sans m-0 p-0 text-left text-white text-base leading-7 break-words;
+    @apply font-sans;
     background-image: url("/images/bg_texture.jpg");
 }
 

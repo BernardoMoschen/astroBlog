@@ -6,7 +6,7 @@ import { Picture } from 'astro:assets';
 ---
 
 <header
-    class='fixed left-0 top-0 z-50 flex w-full items-center justify-between px-4 py-4 gap-4 bg-transparent'
+    class='fixed left-0 z-50 top-0 flex w-full items-center justify-between gap-4 px-4 py-4 min-[560px]:px-6'
 >
     <a
         class='hidden shrink-0 items-center gap-3 active:-translate-y-px min-[560px]:flex'
@@ -16,12 +16,9 @@ import { Picture } from 'astro:assets';
             <Picture
                 alt='Bernardo Moschen'
                 src={logoBee}
-                layout='responsive'
                 pictureAttributes={{
-                    class: 'hidden xs:inline-flex',
+                    class: 'hidden xs:inline-flex w-[45px]',
                 }}
-                widths={[45, 55, 65]}
-                sizes={`(max-width: 360px) 45px, (max-width: 720px) 55px, (max-width: 1600px) 65px`}
             />
         </div>
         <div
