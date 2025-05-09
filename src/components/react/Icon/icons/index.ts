@@ -8,3 +8,4 @@ export * from "./Briefcase";
 export * from "./BeeOrigami";
 export * from "./Robot";
 export * from "./Brazil";
+export * from "./Cuia";

@@ -1,4 +1,4 @@
-import { Briefcase, Clock, Fire, GitHub, LinkedIn, Sun, TerminalOutlined, BeeOrigami, Robot, Brazil } from '@/components/react/Icon/icons'
+import { Briefcase, Clock, Fire, GitHub, LinkedIn, Sun, TerminalOutlined, BeeOrigami, Robot, Brazil, Cuia } from '@/components/react/Icon/icons'
 import type { FC, SVGProps } from 'react';
 
 type IconName =
@@ -11,6 +11,7 @@ type IconName =
     'briefcase' |
     'beeOrigami' |
     'robot' |
+    'cuia' |
     'brazil';
 ;
 
@@ -25,6 +26,7 @@ const iconMapping: Record<IconName, FC<SVGProps<SVGSVGElement>>> = {
     linkedin: LinkedIn,
     fire: Fire,
     clock: Clock,
+    cuia: Cuia,
     sun: Sun,
     robot: Robot,
     brazil: Brazil,
