@@ -2,6 +2,8 @@
 import Portrait from '@/assets/portrait_me.jpg';
 import { Picture } from 'astro:assets';
 import CTA from './CTA.astro';
+import Icon from '@/components/react/Icon';
+import { CURRENT_EMPLOYMENT_NAME, CURRENT_EMPLOYMENT_URL } from '@/consts';
 ---
 
 <div id='intro' class='relative mr-6 flex'>
@@ -9,18 +11,24 @@ import CTA from './CTA.astro';
         class='absolute inset-0 z-0 flex h-full max-h-full flex-1 -rotate-2 gap-1 opacity-80'
     >
         <div
-            class='max-w-full flex-1 rounded-xl bg-neutral-800 p-2 text-neutral-400 shadow-sm shadow-black hover:text-neutral-500'
+            class='max-w-full flex-1 rounded-xl bg-neutral-800 p-2 shadow-sm shadow-black'
         >
         </div>
     </div>
     <div class='relative z-10 flex h-full max-h-full flex-1 gap-1'>
         <div
-            class='max-w-full flex-1 rounded-xl bg-neutral-800 p-2 text-white shadow-sm shadow-black hover:text-neutral-500'
+            class='max-w-full flex-1 rounded-xl bg-neutral-800 p-2 text-white shadow-sm shadow-black'
         >
             <div class='flex h-full flex-col rounded-lg bg-neutral-900 p-8'>
                 <div class='flex flex-col gap-6'>
                     <div>
-                        <h2 class='text-2xl font-bold text-white'>
+                        <h2
+                            class='max-w-md pr-6 text-2xl leading-[1.125] font-bold tracking-tight text-balance'
+                        >
+                            <Icon
+                                name='terminalOutlined'
+                                className='mr-1.5 inline-block h-5 -translate-y-0.5 text-tangelo-400'
+                            />
                             Code that feels good to read.
                             <br /> Apps that feel good to use.
                         </h2>
@@ -42,7 +50,27 @@ import CTA from './CTA.astro';
                         </p>
                     </div>
                 </div>
-                <CTA />
+                <div class='flex flex-col gap-2'>
+                    <div class='my-6 h-[1px] w-full bg-neutral-700'></div>
+                    <div>
+                        <p
+                            class='text-md leading-none text-pretty text-neutral-300'
+                        >
+                            <Icon
+                                name='briefcase'
+                                className='mr-0.5 inline-block h-5 -translate-y-0.5 text-tangelo-400'
+                            />
+                            Currently employed at:<a
+                                href={CURRENT_EMPLOYMENT_URL}
+                                ><span class='text-neutral-200 font-semibold'
+                                    >{` ${CURRENT_EMPLOYMENT_NAME}`}</span
+                                ></a
+                            >
+                        </p>
+                    </div>
+                    <div class='my-6 h-[1px] w-full bg-neutral-700'></div>
+                    <CTA />
+                </div>
             </div>
         </div>
     </div>

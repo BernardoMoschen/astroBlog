@@ -1,7 +1,18 @@
-import { Clock, Fire, GitHub, LinkedIn, Sun, TerminalFilled, TerminalOutlined, Thumbtack } from '@/components/react/Icon/icons'
+import { Briefcase, Clock, Fire, GitHub, LinkedIn, Sun, TerminalOutlined, BeeOrigami, Robot, Brazil } from '@/components/react/Icon/icons'
 import type { FC, SVGProps } from 'react';
 
-type IconName = 'terminalOutlined' | 'terminalFilled' | 'github' | 'linkedin' | 'fire' | 'thumbtack' | 'clock' | 'sun';
+type IconName =
+    'terminalOutlined' |
+    'github' |
+    'linkedin' |
+    'fire' |
+    'clock' |
+    'sun' |
+    'briefcase' |
+    'beeOrigami' |
+    'robot' |
+    'brazil';
+;
 
 
 interface IconProps extends SVGProps<SVGSVGElement> {
@@ -10,12 +21,14 @@ interface IconProps extends SVGProps<SVGSVGElement> {
 
 const iconMapping: Record<IconName, FC<SVGProps<SVGSVGElement>>> = {
     github: GitHub,
+    briefcase: Briefcase,
     linkedin: LinkedIn,
     fire: Fire,
     clock: Clock,
     sun: Sun,
-    thumbtack: Thumbtack,
-    terminalFilled: TerminalFilled,
+    robot: Robot,
+    brazil: Brazil,
+    beeOrigami: BeeOrigami,
     terminalOutlined: TerminalOutlined,
 };
 

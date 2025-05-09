@@ -13,22 +13,37 @@ export const LocationCard: FC<LocationCardProps> = ({ location, countryCode, tem
     const { hour, minute, second } = useCurrentTime(false);
 
     return (
-        <div className="w-fit flex flex-col items-end justify-center py-2 px-4 bg-neutral-900 rounded-xl shadow-sm shadow-neutral-500 gap-2 whitespace-nowrap cursor-default text-xl" >
-            <div className=" text-neutral-300">Currently in{' '}
-                <span className='text-white font-bold' > {location}, {countryCode}</span >
-            </div >
-            <div className='flex flex-row   items-center mt-1 gap-4 px-2.5 py-1 rounded-full border-2 border-neutral-600 bg-neutral-800'>
-                <div className="flex items-center justify-center gap-2 ml-1">
-                    <Icon name="clock" className="w-5 h-5 text-tangelo-500" />
-                    <span className="font-normal text-neutral-300 whitespace-nowrap ">{hour}:{minute}:{second}</span>
-                </div>
-                <div className="flex items-center justify-center gap-2 mr-1">
-                    <Icon name="sun" className="w-5 h-5 text-tangelo-500" />
-                    <span className="font-normal text-neutral-300 whitespace-nowrap ">{temperature}°C</span>
+        <div id='locationCard' className="fadein relative z-30 ml-0 lg:ml-24">
+            {/* <Icon name='beeOrigami'
+                className="
+                h-24 w-24 sticker absolute -top-12 left-8 z-20 transition-transform hover:scale-110 hover:rotate-3 active:translate-y-1 active:scale-105 text-tangelo-400"
+            /> */}
+            <div className="relative h-40 cursor-default overflow-hidden rounded-xl bg-neutral-800 p-2 shadow-sm shadow-black">
+
+                <Icon name='brazil'
+                    className="
+                    fade-in-up absolute top-1/2 -left-56 -mt-[75%] -translate-y-1/2 scale-[1.7]"
+                />
+                <div className="relative flex h-full items-center rounded-lg border border-neutral-600 px-8">
+                    <div className="flex h-full flex-1 flex-col items-end justify-center gap-1" >
+                        <div className=" text-neutral-300 text-xl">Currently in{' '}
+                            <span className='text-white font-bold' > {location}, {countryCode}</span >
+                        </div >
+                        <div className='flex flex-row   items-center mt-1 gap-4 px-2.5 py-1 text rounded-full border-2 border-neutral-600 bg-neutral-800'>
+                            <div className="flex items-center justify-center gap-2 ml-1">
+                                <Icon name="clock" className="w-5 h-5 text-tangelo-500" />
+                                <span className="font-normal text-neutral-300 whitespace-nowrap ">{hour}:{minute}:{second}</span>
+                            </div>
+                            <div className="flex items-center justify-center gap-1.5 mr-1">
+                                <Icon name="sun" className="w-5 h-5 text-tangelo-500" />
+                                <span className="font-normal text-neutral-300 whitespace-nowrap ">{temperature}°C</span>
+                            </div>
+                        </div>
+                        {/* <div className="mt-2 text-sm text-neutral-300">{weather}</div> */}
+                    </div >
                 </div>
             </div>
-            {/* <div className="mt-2 text-sm text-neutral-300">{weather}</div> */}
-        </div >
+        </div>
     );
 };
 
