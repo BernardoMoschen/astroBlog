@@ -13,7 +13,7 @@ export const LocationCard: FC<LocationCardProps> = ({ location, countryCode, tem
     const { hour, minute, second } = useCurrentTime(false);
 
     return (
-        <div className="w-fit flex flex-col items-end justify-center py-2 px-8 bg-neutral-800 rounded-xl shadow-sm shadow-neutral-500 gap-2 whitespace-nowrap cursor-default text-xl " >
+        <div className="w-fit flex flex-col items-end justify-center py-2 px-4 bg-neutral-900 rounded-xl shadow-sm shadow-neutral-500 gap-2 whitespace-nowrap cursor-default text-xl" >
             <div className=" text-neutral-300">Currently in{' '}
                 <span className='text-white font-bold' > {location}, {countryCode}</span >
             </div >
