@@ -8,10 +8,12 @@ type ButtonProps = {
 
 export const Button = ({ label, href, className, ...restProps }: ButtonProps) => {
     return (
-        <a href={href}
-            className={cn(className, "cursor-pointer rounded px-5 py-2.5 overflow-hidden  bg-tangelo-500 relative hover:bg-gradient-to-r hover:from-tangelo-600 hover:to-tangelo-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-tangelo-400 transition-all ease-out duration-300")}>
-            <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-amber-500 opacity-10 rotate-12 -hover:-translate-x-40 ease"></span>
-            <span className="relative">{label}</span>
+        <a href={href} {...restProps}>
+            <button className={cn("cursor-pointer font-semibold overflow-hidden relative z-100 border border-green-500 group px-8 py-2", className)}>
+                <span className="relative z-10 text-green-500 group-hover:text-white text-xl duration-500">{label}</span>
+                <span className="absolute w-full h-full bg-green-500 -left-32 top-0 -rotate-45 group-hover:rotate-0 group-hover:left-0 duration-500"></span>
+                <span className="absolute w-full h-full bg-green-500 -right-32 top-0 -rotate-45 group-hover:rotate-0 group-hover:right-0 duration-500"></span>
+            </button>
         </a>
     );
 };

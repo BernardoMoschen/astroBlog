@@ -1,4 +1,5 @@
-import { useState, type ButtonHTMLAttributes } from 'react'; // Import useState
+import { cn } from '@/utils';
+import { useState, useRef, useLayoutEffect, type ButtonHTMLAttributes } from 'react';
 
 type ButtonProps = {
     label: string;
@@ -6,10 +7,17 @@ type ButtonProps = {
 
 export const ClipboardButton = ({ label, ...restProps }: ButtonProps) => {
     const [isCopied, setIsCopied] = useState(false);
+    const [minW, setMinW] = useState<number>();
+    const btnRef = useRef<HTMLButtonElement>(null);
+
+    useLayoutEffect(() => {
+        if (btnRef.current) {
+            setMinW(btnRef.current.offsetWidth);
+        }
+    }, []);
 
     const handleCopyClick = async () => {
         try {
-            console.log('a')
             await navigator.clipboard.writeText(label);
             setIsCopied(true);
             setTimeout(() => setIsCopied(false), 1500);
@@ -20,12 +28,15 @@ export const ClipboardButton = ({ label, ...restProps }: ButtonProps) => {
 
     return (
         <button
+            ref={btnRef}
             onClick={handleCopyClick}
             {...restProps}
-            className="rounded px-5 py-2.5 overflow-hidden  bg-tangelo-500 relative hover:bg-gradient-to-r hover:from-tangelo-600 hover:to-tangelo-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-tangelo-400 transition-all ease-out duration-300 cursor-pointer"
+            style={minW ? { minWidth: `${minW}px` } : undefined}
+            className="flex bg-gradient-to-r from-neutral-300 to-neutral-500 hover:from-tangelo-400 hover:to-tangelo-600 font-bold py-3 px-3 rounded-lg shadow-lg transform transition-all duration-500 ease-in-out hover:scale-105 hover:brightness-110 hover:animate-pulse active:animate-bounce"
         >
-            <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-amber-500 opacity-10 rotate-12 -hover:-translate-x-40 ease"></span>
-            <span className="relative">{isCopied ? 'Copied!' : label}</span>
+            <span className="flex-1 text-black">
+                {isCopied ? 'Email Copied!' : label}
+            </span>
         </button>
     );
 };
