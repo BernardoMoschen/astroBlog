@@ -2,27 +2,37 @@
 import CTA from './CTA.astro';
 ---
 
-<div class='flex flex-col'>
-    <div class='flex flex-col gap-6'>
-        <div>
-            <h2 class='text-2xl font-bold text-white'>
-                Code that feels good to read.
-                <br /> Apps that feel good to use.
-            </h2>
-        </div>
-        <div
-            class='flex flex-col gap-4 text-lg font-light text-neutral-300 leading-tight text-balance'
-        >
-            <p>
-                Since 2019 bringing life to scalable, maintainable solutions
-                that deliver measurable business impact.
-            </p>
-            <p>
-                Mostly advocating in the TypeScript multiverse: React, Node and
-                Tailwind are my go-to weapons of choice.
-                <small class='text-neutral-500'> Hello there, Astro :) </small>
-            </p>
+<div
+    class='group relative h-full rounded-xl border-t border-neutral-700 bg-neutral-800 p-2 shadow-sm shadow-black'
+>
+    <div
+        class='relative z-10 h-full rounded-lg border-b border-neutral-700 bg-linear-45 from-neutral-900 via-neutral-900 to-neutral-950 p-8'
+    >
+        <div class='flex h-full flex-col'>
+            <div class='flex flex-col gap-6'>
+                <div>
+                    <h2 class='text-2xl font-bold text-white'>
+                        Code that feels good to read.
+                        <br /> Apps that feel good to use.
+                    </h2>
+                </div>
+                <div
+                    class='flex flex-col gap-4 text-lg font-light text-neutral-300 leading-tight text-balance'
+                >
+                    <p>
+                        Since 2019 bringing life to scalable, maintainable
+                        solutions that deliver measurable business impact.
+                    </p>
+                    <p>
+                        Mostly advocating in the TypeScript multiverse: React,
+                        Node and Tailwind are my go-to weapons of choice.
+                        <small class='text-neutral-500'>
+                            Hello there, Astro :)
+                        </small>
+                    </p>
+                </div>
+            </div>
+            <CTA />
         </div>
     </div>
-    <CTA />
 </div>
